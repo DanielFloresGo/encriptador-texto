@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="presentacion">
+    <header class="encabezado">
+        <img src="./assets/logo.png" alt="logo_alura" class="imagen__logo">
+        <h1 class="fuente__titulo">Encriptador de texto</h1>
+    </header>
+    <main class="contenido">
+        <div class="contenido__input">
+            <textarea name="" id="mensaje-usuario" oninput="bloquearMayusculasYEspeciales(event)" placeholder="Ingrese el texto aquí" class="area__texto__input"></textarea>
+            <div>
+                <img src="./assets/info.png" alt="signo_advertencia" width="10" height="10">
+                <p class="fuente__avisos">Solo letras minusculas y sin acentos</p>
+
+            </div>
+        </div>
+        <div class="contenido__botones">
+            <button onclick="btnEncriptar()" class="boton_encriptar">Encriptar</button>
+            <button onclick="btnDesencriptar()" class="boton_desencriptar">Desencriptar</button>
+        </div>
+        <div class="contenido__output">  
+            <textarea name="" id="mensaje-resultado" class="area__texto__output"></textarea>
+            <img src="./assets/muneco.png" alt="personaje" class="imagen__persona">
+            <p class="fuente__subtitulo">Ningún mensaje fue encontrado</p>
+            <p class="fuente__texto">Ingresa el texto que deseas encriptar o desencriptrar</p>
+            <button class="boton_copiar">Copiar</button>
+        </div>
+        
+    </main>
+    <footer>
+        <p class="fuente_footer">Desarrollador: Daniel Flores</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
